@@ -21,13 +21,16 @@ def deploy_pet_registry():
         price_feed_address = MockV3Aggregator[-1].address
 
     pet_registry = PetRegistry.deploy(
-        price_feed_address,
         {"from": account},
         publish_source=config["networks"][network.show_active()].get("verify"),
-    )  # publish_source=True is used to verify the contract on Etherscan when dealing with non local networks
+    )  # publish_source=True is used to verify the contract on Etherscan when dealing with non-local networks
     print(f"Contract deployed to {pet_registry.address}")
     return pet_registry
 
 
 def main():
     deploy_pet_registry()
+
+
+if __name__ == "__main__":
+    main()
