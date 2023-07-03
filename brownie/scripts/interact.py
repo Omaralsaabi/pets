@@ -2,20 +2,22 @@ from brownie import PetRegistry
 
 
 def interact_with_contract():
+    print("Interacting with the contract")
+    print("error?", PetRegistry)
     contract = PetRegistry[0]  # Assuming you have already deployed the contract
 
     # Perform interactions with the contract
     contract.addPet(
-        "Pet Name",
-        "Pet Kind",
-        "Pet Breed",
-        "Pet Color",
-        5,
-        "Pet City",
-        "Pet Address",
-        1234567890,
-        "Owner Name",
-        "owner@example.com",
+        "Budran",
+        "husky",
+        "husky",
+        "black",
+        25,
+        "Amman",
+        "Alsowayfiah",
+        7777777777,
+        "Omar",
+        "budran.nigga@gmail.com",
     )
 
     pet = contract.getPet(0)
