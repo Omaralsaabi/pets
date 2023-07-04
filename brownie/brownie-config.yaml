@@ -6,20 +6,27 @@ compiler:
     version: 0.8.0
     remappings:
       - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.2.2"
+
 dotenv: .env
+
 wallets:
   from_key: ${PRIVATE_KEY}
 
 networks:
   default: development
+
   sepolia:
     gas_price: 20000000000
     host: https://sepolia.infura.io/v3/4227969b548343b68b6d3b8c347aad3f
     network_type: testnet
+    verify: True
+
   mainnet-fork-dev:
     eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
     verify: False
+
   development:
     verify: False
+
   ganache-local:
     verify: False
