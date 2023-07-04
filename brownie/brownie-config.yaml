@@ -12,9 +12,10 @@ wallets:
 
 networks:
   default: development
-  Sepolia:
-    eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
-    verify: True
+  sepolia:
+    gas_price: 20000000000
+    host: https://sepolia.infura.io/v3/4227969b548343b68b6d3b8c347aad3f
+    network_type: testnet
   mainnet-fork-dev:
     eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
     verify: False

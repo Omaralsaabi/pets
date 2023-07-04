@@ -1,9 +1,10 @@
 from brownie import PetRegistry
+from scripts.helpful_scripts import get_account
 
 
 def interact_with_contract():
     print("Interacting with the contract")
-    print("error?", PetRegistry)
+    account = get_account()
     contract = PetRegistry[0]  # Assuming you have already deployed the contract
 
     # Perform interactions with the contract
@@ -18,6 +19,7 @@ def interact_with_contract():
         7777777777,
         "Omar",
         "budran.nigga@gmail.com",
+        {"from": account},
     )
 
     pet = contract.getPet(0)
